@@ -15,8 +15,64 @@ we place this components in sub route starts rendering fromt there
 */
 
 import { Component } from "react";
-
-class product extends Component
+import {Outlet} from 'react-router-dom'
+import { Link } from "react-router-dom";
+class Description extends Component
 {
+    constructor()
+    {
+        super()
+    }
 
+    render()
+    {
+        return <h1>I am description, child route1</h1>
+    }
 }
+
+
+class Cost extends Component
+{
+    constructor()
+    {
+        super()
+    }
+
+    render()
+    {
+        return <h1>I am cost, child route2</h1>
+    }
+}
+
+class Product extends Component
+{
+    constructor()
+    {
+        super()
+    }
+
+    render()
+    {
+        return(
+            <>
+                <h1>
+                    Parrent product navBar has further two nav places
+                    <br/>
+                    <nav>
+                        <ul>
+                            <li>
+                                <Link to='description'>description</Link>
+                            </li>
+                            <li>
+                                <Link to='cost'>feature</Link>
+                            </li>
+                        </ul>
+                    </nav>
+                </h1>
+                <Outlet/>
+            </>
+        )
+    }
+}
+
+export {Cost,Description,Product}

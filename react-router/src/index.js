@@ -9,6 +9,8 @@ import {Routes} from 'react-router-dom'
 import { NavigateParent } from './4_Navigating_Programatically';
 import { Success } from './4_Navigating_Programatically';
 import NoMatchParent from './5_No_Match_Route';
+import { Cost,Product,Description } from './6_Nested_route';
+import { ChildB, ChildC, ChildD, ParentA } from './7_index_routes';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <BrowserRouter>
@@ -21,6 +23,16 @@ root.render(
         <Route path='navigate' element={<NavigateParent/>}/>
         <Route path='success' element={<Success/>}/>
         <Route path="*" element={<NoMatchParent/>}/>
+        <Route path="product" element={<Product/>}>
+          <Route path="description" element={<Description/>}></Route>
+          <Route path="cost" element={<Cost/>}></Route>
+        </Route>
+        <Route path="indexExample" element={<ParentA/>}>
+          <Route index element={<ChildB/>}/>
+          <Route path="childB" element={<ChildB/>}/>
+          <Route path="childC" element={<ChildC/>}/>
+          <Route path="childD" element={<ChildD/>}/>
+        </Route>
       </Routes> 
     
   </BrowserRouter>
