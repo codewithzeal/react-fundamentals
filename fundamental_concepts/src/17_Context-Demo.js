@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { ConsumerComponent,ProviderComponent } from './17_Context';
+import context, { ConsumerComponent,ProviderComponent } from './17_Context';
 
 class GrandChild extends Component
 {
@@ -34,7 +34,7 @@ class Child extends Component{
     }
 }
 //A way to pass precolated value
-Child.contextType=ConsumerComponent
+Child.contextType=context
 class ParentContext extends Component{
     // prop name value must be fixed
     render()

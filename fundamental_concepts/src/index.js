@@ -14,8 +14,9 @@ import { ErrorParent } from './14_Error_Boundary';
 import ParentHOC from './15_Higher_Order_Functions';
 import ParentRnderProp from './16_Render_props';
 import ParentContext from './17_Context-Demo';
+import ParentDynamicContext from './17_Updating_Context_From_Children';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-<ParentContext />
+<ParentDynamicContext/>
 );
 

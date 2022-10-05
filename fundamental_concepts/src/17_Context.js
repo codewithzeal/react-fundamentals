@@ -54,4 +54,14 @@ const context=React.createContext()
 const ProviderComponent=context.Provider
 const ConsumerComponent=context.Consumer
 
-export {ProviderComponent,ConsumerComponent}
+
+const ContextWithChange=React.createContext({
+        name:'',
+        changeName:()=>{}
+})
+const ChangeProvider=ContextWithChange.Provider
+const ChangeConsumer=ContextWithChange.Consumer
+
+
+export {ProviderComponent,ConsumerComponent,ChangeProvider,ChangeConsumer}
+export default context
