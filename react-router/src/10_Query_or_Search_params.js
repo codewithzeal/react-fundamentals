@@ -1,5 +1,4 @@
 /* 
-
 Here we will se how to deal with search params.
 We pass search parameter manually and also see a way to to apply search param manually.
 Search params usually help with filters

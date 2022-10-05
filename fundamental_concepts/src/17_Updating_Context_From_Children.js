@@ -18,6 +18,10 @@ accompanies an update function which re-renders an element having context value.
 Scenario: The child component toglles name between hari and naman. The child
 receieves these fucntionality and name via context
 
+
+The use case for this will be preventing a person from accesing a component
+before they are loggedIn. useNavigate is used to redirect them to their login page
+
 */
 
 
