@@ -11,6 +11,11 @@ import { Success } from './4_Navigating_Programatically';
 import NoMatchParent from './5_No_Match_Route';
 import { Cost,Product,Description } from './6_Nested_route';
 import { ChildB, ChildC, ChildD, ParentA } from './7_index_routes';
+import DynamicComponent from './8_Dynamic_route';
+import ParamParent from './9_URL_PARAMS';
+import QueryParent from './10_Query_or_Search_params';
+
+
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <BrowserRouter>
@@ -33,6 +38,9 @@ root.render(
           <Route path="childC" element={<ChildC/>}/>
           <Route path="childD" element={<ChildD/>}/>
         </Route>
+        <Route path='dynamic/:anyId' element={<DynamicComponent/>}/>
+        <Route path='get-url-param/:userID' element={<ParamParent/>}/>
+        <Route path='query' element={<QueryParent/>}/>
       </Routes> 
     
   </BrowserRouter>
